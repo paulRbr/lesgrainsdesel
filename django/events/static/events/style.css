@@ -370,25 +370,62 @@ a {
 /*            ADMIN PAGE             */
 /*************************************/
 
-
+.admin {
+  flex-grow: 1;
+  padding: 120px 70px 50px 70px;
+  display: flex;
+  justify-content: center;
+}
 
 .admin .header {
   display: flex;
-  margin: 60px;
-  justify-content: center;
-  flex-direction: row-reverse;
-  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 0px 60px;
+  width: 100%;
+  height: 30%;
+
 }
 
-.admin .logo-edit {
-  margin-left: 60px;
+.admin .logo-edit{
+  padding-top:10px ;
+  display: inline-block;
+  height: 40px;
+}
+
+.admin .logo-edit a{
   color: white;
   padding: 8px 8px 8px 10px;
-  border-radius: 10px;
-  background-color: grey;
+  border-radius: 5px;
+  background-color: rgb(155, 155, 155);
   font-size: larger;
 }
 
+.admin .header h2 {
+  font-size: 1.0625rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.admin .header p {
+  font-size: 1.0625rem;
+  font-weight: 500;
+  color: var(--highlight);
+}
+
+.admin .profile{
+  display: flex;
+}
+
+.admin .header .profile-picture {
+  background-repeat: none;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 8px;
+  width: 50px;
+  height: 57px;
+  margin-left: 35px;
+}
 
 /*************************************/
 

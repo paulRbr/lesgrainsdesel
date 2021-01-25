@@ -5,7 +5,19 @@
 <section class="admin" id="admin">
     <div class="header">
         <div class="logo-edit">
-            <i class="fas fa-edit"></i>
+            <a href="">
+                <i class="fas fa-edit"></i>
+            </a>
+        </div>
+        <div class="profile">
+            <div>
+                <h2>{{current_user.first_name}} test name{{current_user.last_name}}</h2>
+                <p>admin</p>
+            </div>
+            <div
+            class="profile-picture"
+            style="background-image : url('{{ admin.picture.url }}')"
+            ></div>
         </div>
     </div>
 </section>
