@@ -27,6 +27,10 @@ def participations(request):
     return render(request, 'events/participations.html')
 
 @login_required(login_url='/login/')
+def administrator(request):
+    return render(request, 'events/administrator.html')
+
+@login_required(login_url='/login/')
 def redirect_view(request):
     response = redirect("events/1")
     return response

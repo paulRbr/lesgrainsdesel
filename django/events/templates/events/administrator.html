@@ -1,0 +1,24 @@
+{% extends 'events/events_list.html' %} {% block details %}
+<!--Utiliser la version de production apres-->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<section class="admin" id="admin">
+    <div class="header">
+        <div class="logo-edit">
+            <i class="fas fa-edit"></i>
+        </div>
+    </div>
+</section>
+
+<script>
+    var create_events_app = new Vue({
+        el: '#admin',
+        delimiters: ['${','}'],
+        data: {
+            page_index: 1,
+        },
+    });
+</script>
+{% endblock details %}
+
+
