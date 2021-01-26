@@ -6,7 +6,7 @@
     <div class="header">
         <div class="logo-edit">
             <a href="">
-                <i class="fas fa-edit"></i>
+                <i class="far fa-edit"></i>
             </a>
         </div>
         <div class="profile">
@@ -20,6 +20,39 @@
             ></div>
         </div>
     </div>
+    <div class="content">
+        <div class="content-wrapper">
+          <div
+            class="img"
+            style="background-image: url('{{selected.image.url}}')"
+          >img</div>
+          <div class="small">
+            <div class="icon">
+              <i class="far fa-user-circle"></i>
+            </div>
+            <p>{{participation.count}} personnes participent</p>
+          </div>
+          <div class="text">
+            <h1>{{ selected.title }}Titre</h1>
+            <p>{{ selected.long_description }}description</p>
+          </div>
+          <div class="call-to-action">
+            <a href="#"><button>
+                <i class="fas fa-check"></i>
+            </button></a>
+            <a href="#" class="refuse" ><button>
+                <i class="fas fa-times"></i>
+            </button></a>
+            <div class="sub-text">
+              <p><strong>{{selected.date_begin|date:"d M Y"}} DD/MM/YYYY</strong></p>
+              <p>
+                {{selected.date_begin|date:"D"}}jour à heure
+                {{selected.date_begin|date:"H:i"}}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
 </section>
 
 <script>
