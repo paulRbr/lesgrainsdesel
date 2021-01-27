@@ -436,14 +436,13 @@ a {
   width: 80%;
 }
 
-
 .admin .content .img {
   background-size: cover;
   width: 500px;
   height: 226px;
   margin: auto;
   border-radius: 10px;
-  border: solid grey 3px;
+  border: hidden;
   padding: 5px;
 }
 
@@ -492,6 +491,11 @@ a {
   font-size: larger;
   border-radius: 8px;
   box-shadow: var(--greenShadow);
+}
+
+.admin .call-to-action button:hover {
+  background-color: var(--hover-highlight);
+  cursor: pointer;
 }
 
 .admin .refuse button {
@@ -552,7 +556,18 @@ a {
   .details .content .img {
     display: none;
   }
+
+  .admin {
+    flex-grow: 1;
+    padding: 70px 70px 50px 70px;
+  }
+
+  .admin .content .img {
+    display: none;
+  }
 }
+
+
 
 @media only screen and (max-width: 1250px) {
   #nav {
@@ -573,6 +588,13 @@ a {
   .details .content-wrapper,
   .details .content .img,
   .details .header {
+    width: 350px;
+  }
+
+  .admin .content,
+  .admin .content-wrapper,
+  .admin .content .img,
+  .admin .header {
     width: 350px;
   }
 

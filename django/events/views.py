@@ -27,10 +27,22 @@ def participations(request):
     return render(request, 'events/participations.html')
 
 @login_required(login_url='/login/')
-def administrator(request):
-    return render(request, 'events/administrator.html')
+def administrator(request, id):
+    if Event.objects.count() != 0:
+        sorted_events_list = Event.objects.order_by('date_begin')
+        context = {'eventsList': sorted_events_list}
+        context["selected"] = Event.objects.get(id=id)
+        context["participation"] = Participation.objects.filter(event__id=id)
+        current_user = request.user
+        context["current_user"] = current_user
+        context["adherent"] = Adherent.objects.all().filter(user__id=current_user.id)[0]
+    else:
+        context = {}
+    return render(request, 'events/administrator.html', context)
 
 @login_required(login_url='/login/')
 def redirect_view(request):
     response = redirect("events/1")
     return response
+
+
